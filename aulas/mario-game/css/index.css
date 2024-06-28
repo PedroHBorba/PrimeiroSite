@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing:border-box;
+}
+
+.game-board{
+    width: 1100px;
+    height: 500px;
+    border: 2px solid #333;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+    
+}
+
+.mario{
+    position: absolute;
+    width: 150px;
+    bottom: 0%;
+}
+
+.mario-jump{
+    animation: mario_jump 500s ease-out;
+}
+
+.clouds{
+    position: absolute;
+    width: 400px;
+    animation: clouds-animation 15s infinite  linear;
+}
+
+
+/*animação do mario
+*/
+@keyframes mario_jump{
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 150px;
+    }
+    50%{
+        bottom: 150px;
+    }
+
+    60%{
+        bottom: 150px;
+    }
+    
+    100%{
+        bottom: 0;
+    }
+}
+
+/*animação do tubo
+aqui se for usado o tamanho do tubo de forma de nagitva posso fazer com que ele apareça lentamente na tela*/
+@keyframes pipe-animation{
+    from{
+     right: -80px;
+    }
+    to{
+     right: 100%;
+    }
+}
+
+@keyframes clouds-animation{
+    from{
+        right:-50%;
+    }
+    to{
+        right: 100%;
+    }
+}

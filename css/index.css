@@ -1,0 +1,94 @@
+
+body {
+  background-image: url("../img/astronauta.png");
+  background-size: cover;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+h1 {
+  background-color: aquamarine;
+  font-style: italic;
+  width: 200px;
+  margin: 30px;
+  left: 45%;
+  position: absolute;
+  font-size:x-large;
+
+}
+
+
+a {
+  font-style: italic;
+  background-color: aliceblue;
+  border-style: dotted;
+}
+
+.container{
+  margin: auto; width: 940px;
+
+}
+
+.carrinho{
+  background: url(../img/carrinho-de-compras.png) no-repeat top right;
+  font-size: 17px;
+  padding-right: 35px;
+  text-align: right;
+  width: 140px;
+  background-size: contain;
+  background-color: white;
+  position: absolute; top: 0%; right: 0%;
+}
+.menu_opcoes ul{font-size: 15px;}
+.menu-opcoes ul li{display: inline; margin-left: 20px ;}
+.menu_opcoes a{ color: #003366;}
+.menu-opcoes{position: absolute;top: 0%; right: 250px;}
+
+/* perguntar pro sor porque ele está colocando tudo em cima do titulo "Pagina inicial"
+header{position: relative;}*/
+
+
+.painel-aulas{
+  background-color: white;
+  align-content: center;
+  width: 715px;
+  height: 60%;
+  margin-left: 30%;
+  bottom: 10%;
+  float: left; 
+  background-color: #f5dcdc; 
+  position: absolute;
+
+}
+.painel-li1{
+  display: inline-block; 
+    vertical-align: top; 
+    width: 140px; 
+    margin: 2px;
+    padding-bottom: 10px; 
+    color: #333; 
+
+}
+
+.painel-aula2{
+  align-items: center;
+  display: inline-block;
+  position: absolute;
+  margin-left: 215px;
+  margin-top: 30px;
+}
+
+.painel-aula1{
+  align-items: center;
+  display: inline-block;
+  position: relative;
+  margin-right: 30%;
+  margin-top: 40px;
+}
+
+
+
+.image-logo{
+ width: 20%;
+ right: 40%;
+ position: absolute; left: 1%; top: 2%;
+}
