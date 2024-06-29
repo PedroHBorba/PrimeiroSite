@@ -29,16 +29,18 @@ main{
 
 
 /* ajustando o pokemon de acordo com a main(usando % nas posições para usar a main como base) */
-.pokemon-image{
-    position: absolute;
+#pokemon_image{
+    position: relative;
+    align-content: center;
     bottom: 60%;
     left: 50%;
     transform: translate(-63%,  20%);
 /*usando também transform: translate(-63% , 0) para mover o poekmon para o meio da pokedex */
-    height: 20%;
+    width: 200px;
+    height: 200px;
 }
 
-.pokemon-data{
+#pokemon_info{
     position: absolute;
     font-weight: 600;
     color: #aaa;
@@ -50,7 +52,7 @@ main{
 
 
 /*mudando a cor do nome e usando captalize para deixar a primeira letra maiúscula */
-.pokemon-name{
+#pokemon_name{
     color: #aaa;
     text-transform: capitalize;
 }
