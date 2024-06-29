@@ -1,41 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!--LINKS-->
     <link rel="icon" href="./FAVICONS/favicon1-16x16.png">
     <link rel="stylesheet" href="./CSS/style.CSS">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
     <title>Pokedex</title>
 </head>
+
 <body>
-    
+    <!-- Música de fundo enquanto a página é carregada (Caso não funcionar, clique no icone acima da pokedex.) -->
+    <audio id="background-music" src="img/fund.mp3" autoplay loop></audio>
+    <!-- Botão de ligar/desligar música -->
+   
 
-<main>
-    <img src="" alt="pokemon" class="pokemon__image">
+    <main>
+         <button id="music-button" onclick="toggleMusic()">
+        <img id="music-icon" src="img/com-audio.png" alt="Botão de música" width="20" height="20">
+    </button>
+        <div class="pokedex">
+            <!-- Nesta área é exibida o display de informacoes do Pokemon. (Nome, altura, peso, tipos, imagem e o som) -->
+            <div class="display">
+                <div id="pokemon-info">
 
-    <h1 class="pokemon_data">
-        <span class="pokemon__number">6</span>-
-        <span class="pokemon__name">charizard</span>
+                    <div class="informacoes">
+                        <!-- Imagem do Pokémon -->
+                        <img id="pokemon-image" src="" alt="">
+                        <!-- Nome do pokemon -->
+                        <p id="pokemon-nome"></p>
+                        <!-- Tipo do Pokémon -->
+                        <p id="pokemon-tipos"></p>
+                        <!-- Peso do Pokémon -->
+                        <p id="pokemon-peso"></p>
+                        <!-- Altura do Pokémon -->
+                        <p id="pokemon-altura"></p>
+                    </div>
 
-    </h1>
-<!-- usando form para configurar a pesquisa de pokemons -->
-    <form class="form">
-        <input 
-        class="input__search"
-        type="search"
-        placeholder="Name or Number"
-        required
-        />
-    </form>
+                    <audio id="pokemon-som" src=""></audio>
 
-    <div class="buttons">
-        <button class="button buttons-prev">Prev ↩ </button>
-        <button class="button buttons_next">Next ↪ </button>
-    </div>
+                </div>
+                <form class="form">
+                    <input class="input-search" type="search" placeholder="Name or Number" required />
+                    <!-- usando form para configurar a pesquisa de pokemons -->
+                    <button class="button button-search", onclick="fetchPokemon()">Search 🔍</button>
+                </form>
 
-    <img src="./IMAGES/pokedex.png" alt="pokedex" class="pokedex">
-</main>
+            </div>
 
+        </div>
+
+        
+
+
+
+        <img src="./IMAGES/pokedex.png" alt="pokedex" class="pokedex">
+    </main>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>

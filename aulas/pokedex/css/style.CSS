@@ -5,7 +5,7 @@
     padding:0%;
     box-sizing: border-box;
     font-family: 'Oxanium', cursive;
- }
+}
 
 
 body{
@@ -27,8 +27,9 @@ main{
     max-width: 525;
 }
 
+
 /* ajustando o pokemon de acordo com a main(usando % nas posições para usar a main como base) */
-.pokemon__image{
+.pokemon-image{
     position: absolute;
     bottom: 60%;
     left: 50%;
@@ -37,7 +38,7 @@ main{
     height: 20%;
 }
 
-.pokemon_data{
+.pokemon-data{
     position: absolute;
     font-weight: 600;
     color: #aaa;
@@ -49,7 +50,7 @@ main{
 
 
 /*mudando a cor do nome e usando captalize para deixar a primeira letra maiúscula */
-.pokemon__name{
+.pokemon-name{
     color: #aaa;
     text-transform: capitalize;
 }
@@ -60,7 +61,7 @@ main{
     left: 13.5%;
 }
 
-.input__search{
+.input-search{
     width: 100%;
     padding: 4%;
     outline: none;
