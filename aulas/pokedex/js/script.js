@@ -23,9 +23,10 @@ async function buscarPokemon() {
 
 function exibirPokemon(pokemon) {
     // -- Exibe as informações do Pokémon na página -->
-    const pokemonImagem = document.getElementById('pokemon_image');
-    pokemonImagem.src = ${pokemon.sprites.front_default};
-    
+    const pokemonImagem = document.getElementById('newImg');
+    const newImg = document.createElement("img");
+    newImg.src = pokemon.sprites.front_default;
+    pokemonImagem.innerHTML = newImg;
     document.getElementById('pokemon_nome').innerText = `Nome: ${pokemon.name}`;
     document.getElementById('pokemon_tipos').innerText = `Tipos: ${pokemon.types.map(typeInfo => typeInfo.type.name).join(', ')}`;
     document.getElementById('pokemon_peso').innerText = `Peso: ${pokemon.weight} kg`;
