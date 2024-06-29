@@ -4,8 +4,8 @@
 async function fetchPokemon() {
     // -- Obter o ID do pokemon pelo Usuario -->
 
-    const pokemonId = document.getElementById('pokemon-id').value;
-
+    const pokemonId = document.getElementById("pokemon-id").value;
+   
     // -- Ação para verificar o ID, se é ou não compativel -->
     if (pokemonId) {
         try {
@@ -17,6 +17,7 @@ async function fetchPokemon() {
             // -- Exibe as informações do Pokémon na página -->
             const pokemonImagem = document.getElementById('pokemon-image');
             pokemonImagem.src = pokemon.sprites.front_default;
+            alert("teste");
             pokemonImagem.style.display = 'block';
             document.getElementById('pokemon-nome').innerText = `Nome: ${pokemon.name}`;
             document.getElementById('pokemon-tipos').innerText = `Tipos: ${pokemon.types.map(typeInfo => typeInfo.type.name).join(', ')}`;
@@ -42,21 +43,21 @@ async function fetchPokemon() {
         }
     }
 }
-    // -- Musica de fundo. -->
-    let musicaFundo = true;
-    
-    function toggleMusic() {
-        const music = document.getElementById('background-music');
-        const musicIcon = document.getElementById('music-icon');
+// -- Musica de fundo. -->
+let musicaFundo = true;
 
-        // -- Altera entre icones quando clicar para parar e retomar. -->
-        if (musicaFundo) {
-            music.pause();
-            musicaFundo = false;
-            musicIcon.src = 'img/sem-audio.png';
-        } else {
-            music.play();
-            musicaFundo = true;
-            musicIcon.src = 'img/com-audio.png'; 
-        }
+function toggleMusic() {
+    const music = document.getElementById('background-music');
+    const musicIcon = document.getElementById('music-icon');
+
+    // -- Altera entre icones quando clicar para parar e retomar. -->
+    if (musicaFundo) {
+        music.pause();
+        musicaFundo = false;
+        musicIcon.src = 'img/sem-audio.png';
+    } else {
+        music.play();
+        musicaFundo = true;
+        musicIcon.src = 'img/com-audio.png';
     }
+}
