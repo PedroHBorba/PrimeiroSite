@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Parallax Effect</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <main>
+      <section class="module parallax parallax-1" data-parallax="scroll" data-image-src="./images/FirstImage.jpg">
+        <h1>Front-end Development</h1>
+      </section>
+
+      <section class="module content">
+        <div class="container">
+          <h2>Structure and Layout</h2>
+          <p>
+            Front-end development begins with creating the structure and layout of a web page using HTML
+            (HyperText Markup Language). HTML is the standard language for marking up web content, allowing
+            for the organization of text, images, links, and other elements. Front-end developers use HTML tags
+            to define headings, paragraphs, lists, tables, and forms. Proper HTML organization is essential to
+            ensure that content is accessible and understandable for both users and search engines.
+          </p>
+        </div>
+      </section>
+
+      <section class="module parallax parallax-2" data-parallax="scroll" data-image-src="./images/SecondImage.jpg">
+        <h1>Designing the Visuals</h1>
+      </section>
+
+      <section class="module content">
+        <div class="container">
+          <h2>Style and Design</h2>
+          <p>
+            After defining the basic structure with HTML, the next step is to apply styles and designs using CSS
+            (Cascading Style Sheets). CSS allows developers to customize the appearance of the page by
+            adjusting colors, fonts, margins, spacing, and responsive layouts. Additionally, CSS frameworks like
+            Bootstrap and Tailwind make it easier to create consistent and modern designs. A well-crafted design
+            enhances the user experience, making navigation more intuitive and visually appealing.
+          </p>
+        </div>
+      </section>
+
+      <section class="module parallax parallax-3" data-parallax="scroll" data-image-src="../images/ThirdImage.jpg">
+        <h1>Adding Functionality</h1>
+      </section>
+
+      <section class="module content">
+        <div class="container">
+          <h2>Interactivity and Dynamics</h2>
+          <p>
+            To add interactivity and dynamics to the page, front-end developers use JavaScript. With JavaScript,
+            it's possible to create animations, validate forms, manipulate the DOM (Document Object Model),
+            and communicate with servers to load data dynamically. JavaScript libraries and frameworks like
+            React, Angular, and Vue.js provide powerful tools for developing complex and reactive user
+            interfaces. The combination of HTML, CSS, and JavaScript allows front-end developers to create rich
+            and engaging web experiences, meeting users' needs efficiently and effectively.
+          </p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/parallax.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.parallax').each(function () {
+        $(this).parallax({
+          imageSrc: $(this).data('image-src')
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

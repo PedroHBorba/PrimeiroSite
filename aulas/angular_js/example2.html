@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example2</title>
+</head>
+
+<body>
+    <h2>Example of Expression with Angular and HTML Elements</h2>
+    <p>The background color of the input will match the color associated with the text the user types</p>
+    <!-- Expression with directive -->
+    <div ng-app="" ng-init="color='lightblue'">
+        <!-- Expression {{ }} -->
+        <input style="background-color: {{color}}" ng-model="color" value="{{color}}">
+        <p>Typed color: {{color}}</p>
+        <!-- Expressions to initialize variables -->
+        <span ng-init="quantity=1; value=5">
+            <!-- Expressions for numerical calculations -->
+            <p>Numerical expression: <span style="background-color: {{color}}">{{ quantity * value }}</span></p>
+            <!-- String concatenation. String literals, by default, use single quotes! -->
+            <span ng-init="name='Someone'; surname='Else'">
+                <p>Full name: {{ name + " " + surname }}</p>
+            </span>
+        </span>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+</body>
+
+</html>
