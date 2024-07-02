@@ -3,7 +3,6 @@
 * {
     margin:0%;
     padding:0%;
-    box-sizing: border-box;
     font-family: 'Oxanium', cursive;
 }
 
@@ -19,20 +18,22 @@ main{
     display: inline-block;
     margin: 2%;
     padding: 15px;
-    position:relative;
+    position: relative;
+
 }
 
 .pokedex{
     width: 100%;
     max-width: 525;
+    position: relative;
 }
 
 
 /* ajustando o pokemon de acordo com a main(usando % nas posições para usar a main como base) */
 #pokemon_image{
-    position: relative;
+    position: absolute;
     align-content: center;
-    bottom: 60%;
+    bottom: 50%;
     left: 50%;
     transform: translate(-63%,  20%);
 /*usando também transform: translate(-63% , 0) para mover o poekmon para o meio da pokedex */
@@ -40,53 +41,27 @@ main{
     height: 200px;
 }
 
-#pokemon_info{
-    position: absolute;
-    font-weight: 600;
-    color: #aaa;
-    top: 54.5%;
-    right: 26%;
-    font-size: clamp(8px, 5vw, 25px);
-                    /*min, desejavél, max*/
-}
 
 
 /*mudando a cor do nome e usando captalize para deixar a primeira letra maiúscula */
-#pokemon_name{
-    color: #aaa;
-    text-transform: capitalize;
+#pokemon_info{
+    top: 67%;
+    color: #000; 
+    width: 10%;
+    right: 60%;
+    font-size: small;
+    font-weight: 5;
+                  /*min, desejavél, max*/
+    position:absolute; 
 }
-.form{
+
+
+#bsearch {
+    width: 25%;
+    top: 87%;
+    right: 20%;
     position: absolute;
-    width: 65%;
-    top: 65%;
-    left: 13.5%;
-}
-
-.input-search{
-    width: 100%;
-    padding: 4%;
-    outline: none;
-    border: 2px solid #333;
-    border-radius: 8px;
-    font-weight: 500;
-    color: #3a444d;
-    font-size: clamp(8px, 5vw, 1ren);
-    box-shadow: -0.5px 1px 0 #888,-2px 3px 0 #333 ;
-}
-
-.buttons{
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translate(-57%, 0);
-    display:flex;
-     gap: 20px;
-}
-
-.button {
-    width: 50%;
-    padding: 4%;
+    padding: 1%;
     border: 2px solid #000;
     border-radius: 5px;
     font-size: clamp(8px, 5vw, 1rem);
@@ -95,7 +70,23 @@ main{
     background-color: #444;
     box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
   }
-.button:active {
-    box-shadow: inset -4px 4px 0 #222;
-    font-size: 0.9rem;
+#bnext{
+    width: 25%;
+    top: 87%;
+    left: 20%;
+    position: absolute;
+    padding: 1%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: clamp(8px, 5vw, 1rem);
+    font-weight: 600;
+    color: white;
+    background-color: #444;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+  }
+  #pokemon_id{
+    top: 62%;
+    position: absolute;
+    right: 21%;
+    width: 50%;
   }

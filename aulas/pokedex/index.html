@@ -7,7 +7,7 @@
     <!--LINKS-->
     <link rel="icon" href="./FAVICONS/favicon1-16x16.png">
     <link rel="stylesheet" href="./CSS/style.CSS">
-    <script src="./js/script.js" defer></script>
+    <script src="./js/script1.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Pokedex</title>
@@ -20,16 +20,15 @@
    
 
     <main>
-         
-        <div class="pokedex">
+         <img src="./IMAGES/pokedex.png" alt="pokedex" class="pokedex">
+         <img id="pokemon_image" src="./images/greatball.png" alt="Pokemon não encontrado">
+        <div>
             <!-- Nesta área é exibida o display de informacoes do Pokemon. (Nome, altura, peso, tipos, imagem e o som) -->
             <div class="display">
-                <img id="pokemon_image" src="" alt="">
+                
                 <div id="pokemon_info">
 
                     <div class="informacoes">
-                        <!-- Imagem do Pokémon -->
-                        
                         <!-- Nome do pokemon -->
                         <p id="pokemon_nome"></p>
                         <!-- Tipo do Pokémon -->
@@ -40,13 +39,16 @@
                         <p id="pokemon_altura"></p>
                     </div>
 
-                    <audio id="pokemon_som" src="./images/fund.mp3"></audio>
-
                 </div>
-                <form class="form">
+
+                <audio id="pokemon_som" src="./images/fund.mp3"></audio>
+                <form >
                     <input  type="number" id="pokemon_id" placeholder="Number" required />
                     <!-- usando form para configurar a pesquisa de pokemons -->
-                    <button onclick="buscarPokemon()">Search 🔍</button>
+                    <div class="buttons">
+                    <button id="bsearch">Search 🔍</button>
+                    <button id="bnext">Next</button>
+                </div>
                 </form>
 
             </div>
@@ -57,7 +59,7 @@
 
 
 
-        <img src="./IMAGES/pokedex.png" alt="pokedex" class="pokedex">
+        
     </main>
 
     
