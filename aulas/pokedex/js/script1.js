@@ -6,6 +6,7 @@ const pokemonImagem = document.getElementById('pokemon_image');
 const pokemonInput = document.getElementById('pokemon_id');
 const btnPesquisar = document.getElementById('bsearch');
 const btnNext = document.getElementById('bnext');
+const ball = document.getElementById('pokemon_image')
 
 const fetchPokemon = async (pokemon) => {
     const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
@@ -30,8 +31,8 @@ async function exibirPokemon(pokemon) {
         pokemonImagem.style.display = "none";
     }
     // -- Exibe as informações do Pokémon na página -->
-    document.getElementById('pokemon_nome').innerText = `Nome: ${pokemon.name}`;
-    document.getElementById('pokemon_tipos').innerText = `Tipos: ${pokemon.types.map(typeInfo => typeInfo.type.name).join(', ')}`;
+    document.getElementById('pokemon_nome').innerText = `Nome: ${data.form.name}`;
+    document.getElementById('pokemon_tipos').innerText = `Tipos: ${data.types.map(typeInfo => typeInfo.type.name).join(', ')}`;
     document.getElementById('pokemon_peso').innerText = `Peso: ${pokemon.weight} kg`;
     document.getElementById('pokemon_altura').innerText = `Altura: ${pokemon.height} m`;
 
@@ -73,7 +74,8 @@ let musicaFundo = true;
 btnPesquisar.addEventListener('click', (event) => {
     event.preventDefault();
     if (pokemonInput.value === "") {
-        return
+        ball;
+        return 
     }
     exibirPokemon(pokemonInput.value.toLowerCase());
 });

@@ -49,10 +49,10 @@ main{
     color: #000; 
     width: 10%;
     right: 60%;
-    font-size: small;
+    font-size: medium;
     font-weight: 5;
                   /*min, desejavél, max*/
-    position:absolute; 
+    position:relative; 
 }
 
 
