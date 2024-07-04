@@ -1,0 +1,9 @@
+body{
+    text-align: center;
+    background: linear-gradient(to bottom, #9a8bb7ca,rgb(197, 97, 30));
+    min-height: 100vh;
+
+  }
+  #lista{
+    display:list-item;
+  }
