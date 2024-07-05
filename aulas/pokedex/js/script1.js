@@ -6,10 +6,14 @@ const pokemonImagem = document.getElementById('pokemon_image');
 const pokemonInput = document.getElementById('pokemon_id');
 const btnPesquisar = document.getElementById('bsearch');
 const btnNext = document.getElementById('bnext');
-const ball = document.getElementById('pokemon_image')
+const ball = document.getElementById('pokemon_image');
+let tipo = document.getElementById('pokemon_tipos');
+let peso = document.getElementById('pokemon_pesos');
+let altura = document.getElementById('pokemon_altura');
+let name = document.getElementById('pokemon_nome');
 
 const fetchPokemon = async (pokemon) => {
-    const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+    const APIResponse = await fetch(`https://ex.traction.one/pokedex/pokemon${pokemon}`);
 
     if (APIResponse.status === 200) {
         const data = await APIResponse.json();
@@ -26,15 +30,12 @@ async function exibirPokemon(pokemon) {
         pokemonImagem.style.display = "block";
         pokemonImagem.src = data.sprites.front_default;
         pokemonId = data.id;
-    }
-    else {
-        pokemonImagem.style.display = "none";
-    }
-    // -- Exibe as informações do Pokémon na página -->
-    document.getElementById('pokemon_nome').innerText = `Nome: ${data.form.name}`;
-    document.getElementById('pokemon_tipos').innerText = `Tipos: ${data.types.map(typeInfo => typeInfo.type.name).join(', ')}`;
-    document.getElementById('pokemon_peso').innerText = `Peso: ${pokemon.weight} kg`;
-    document.getElementById('pokemon_altura').innerText = `Altura: ${pokemon.height} m`;
+         // -- Exibe as informações do Pokémon na página -->
+    name = `Nome: ${data.forms.url}`;
+    tipo = `Tipos: ${data.types.map(typeInfo => typeInfo.type.name).join(', ')}`;
+    peso = `Peso: ${pokemon.weight} kg`;
+    altura = `Altura: ${pokemon.height} m`;
+    console.log("Teste: " + name);
 
     if (pokemon.cries && pokemon.cries.latest) {
         const pokemonSom = document.getElementById('pokemon_som');
@@ -47,6 +48,14 @@ async function exibirPokemon(pokemon) {
     } else {
         console.log('Não encontrado.');
     }
+
+    }
+    else {
+        pokemonImagem.style.display = "none";
+    }
+   
+
+    
 }
 
 
