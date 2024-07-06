@@ -45,14 +45,18 @@ main{
 
 /*mudando a cor do nome e usando captalize para deixar a primeira letra maiúscula */
 #pokemon_info{
-    top: 67%;
+    top: 0%;
     color: #000; 
     width: 10%;
     right: 60%;
     font-size: medium;
     font-weight: 5;
                   /*min, desejavél, max*/
-    position:relative; 
+    position:absolute; 
+}
+#pokemon_nome{
+    position: absolute;
+    color: #000;
 }
 
 
